@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Weather JS</title>
+</head>
+
+<body>
+  <main class="weather">
+    <article class="weather__left">
+      <div class="weather__left-container">
+        <h1 class="degrees">°</h1>
+        <div class="location-time-container">
+          <h2 class="location">Location</h2>
+          <h3 class="date-time">Time - Monday, 9 Sep 2020</h3>
+        </div>
+        <img class="weather-icon hidden" src="#" alt="Icon showing weather">
+      </div>
+    </article>
+
+    <article class="weather__right">
+      <form class="weather-submit">
+        <input type="text" class="location-input" placeholder="Location">
+
+        <button class="search-btn">
+          <img src="./img/search-icon.svg" alt="Search Icon" width="30" height="30">
+        </button>
+      </form>
+
+      <hr>
+
+      <h2 class="weather__details-title">Weather Details</h2>
+      <div class="weather__information-container">
+        <div class="weather__information">
+          <h3>Cloudy</h3>
+          <h3>Humidity</h3>
+          <h3>Wind</h3>
+          <h3>Rain</h3>
+        </div>
+
+        <div class="weather__information-values">
+          <h3 class="cloudy-value">0%</h3>
+          <h3 class="humidity-value">0%</h3>
+          <h3 class="wind-value">0mph</h3>
+          <h3 class="rain-value">0mm</h3>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <script defer src="main.js"></script>
+</body>
+</html>

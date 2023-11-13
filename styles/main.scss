@@ -1,0 +1,128 @@
+*::before,
+*::after,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }
+
+.hidden { visibility: hidden; }
+
+.weather-icon { margin-left: 2rem; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Plus Jakarta Text', 'Muli', sans-serif;
+  background-color: #242424;
+  backdrop-filter: blur(20px);
+  color: white;
+  height: 100vh;
+}
+
+.weather {
+  display: flex;
+  background: royalblue;
+  width: 1250px;
+  height: 650px;
+  background: url('../img/raining.jpg') center center/cover no-repeat;
+  opacity: 0.8;
+  box-shadow: 22px 22px 22px rgba(0, 0, 0, 0.7);
+
+  &__left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-shadow: 12px 12px 12px black;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      padding: 6rem 8rem;
+      
+      .degrees {
+        font-size: 9rem;
+        font-weight: normal;
+        margin-right: 2rem;
+      }
+      
+      .location {
+        font-size: 3.5rem;
+        font-weight: normal;
+        margin-bottom: 0.5rem;
+        
+        + h3 {  
+          font-size: 1.7rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    position: relative;
+    padding: 5rem;
+    background: rgba(31, 37, 37, 0.8);
+    backdrop-filter: blur(3px);
+
+    .search-btn {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      background-color: #88a3a1;
+      transition: background-color 120ms ease-in-out;
+      cursor: pointer;
+
+      &:hover { background-color: #4f6764; }
+    }
+
+    form { margin-bottom: 20rem; }
+
+    hr {
+      margin-bottom: 5rem;
+      border: 1px solid #718583;
+    }
+
+    input {
+      width: calc(100% - 80px);
+      background: none;
+      border: none;
+      border-bottom: 2px solid #718583;
+      padding-bottom: 4px;
+      font-family: inherit;
+      font-size: 18px;
+      color: #718583;
+    }
+
+    .weather__details-title {
+      font-weight: normal;
+      font-size: 1.7rem;
+      margin-bottom: 3rem;
+    }
+
+    .weather__information-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25rem;
+
+      .weather__information h3, .weather__information-values h3  {
+        font-weight: 400;
+        font-size: 1.7rem;
+        color: #718583;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
